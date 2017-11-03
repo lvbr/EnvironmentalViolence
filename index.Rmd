@@ -9,7 +9,7 @@ output:
     toc_float: yes
 ---
 
-*"Donde hay poca justicia es un peligro tener razon"* - Francisco de Quevedo
+*"Donde hay poca justicia es un peligro tener razon"*, Francisco de Quevedo
 
 ```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -49,7 +49,7 @@ The 84 violent episodes here presented, were collected from 18 environmental con
 
 ### Who are the environmental activists?
 
-* 91% of environmental leaders are **males**, most of them are farmers, peasants, artisanal miners or employed at industrial firms.
+- 91% of environmental leaders are **males**, most of them are farmers, peasants, artisanal miners or employed at industrial firms.
 
 ```{r fig.height = 6, fig.width = 8}
 activists <- RawData %>% 
@@ -76,7 +76,7 @@ genderplot <- ggplot(activists, aes(Gender)) +
 genderplot
 ```
 
-* Most of the environmental activists form part of a social organization. Some others are indigenous leaders, afro-Colombian leaders or political leaders. 
+- Most of the environmental activists form part of a social organization. Some others are indigenous leaders, afro-Colombian leaders or political leaders. 
 
 ```{r fig.height = 5, fig.width = 10.5}
 leadershiplot <- ggplot(activists, aes(Leadership)) +
@@ -93,19 +93,19 @@ leadershiplot
 
 According to my understanding on the social and political atmosphere in Colombia, I've classified environmental conflicts into 5 main categories that I consider are reprensentative of the situation:
 
-* Land restitution
-* Environmental damage
-* Compensation
-* Traditional livelihoods
-* Crop substitution
+- Land restitution
+- Environmental damage
+- Compensation
+- Traditional livelihoods
+- Crop substitution
 
 All environmental conflicts are associated with 6 industrial activities:
 
-* Mining
-* Palm oil
-* Oil&Gas
-* Food Industry
-* Hydropower 
+- Mining
+- Palm oil
+- Oil&Gas
+- Food Industry
+- Hydropower 
 
 ```{r}
 conflicts <- RawData %>% 
@@ -132,9 +132,10 @@ conflict1 <- ggplot(conflicts, aes(Driver)) +
              
 conflict1
 ```
-* It can be observed that the mining industry is associated with 3 of the 5 types of environmental conflicts: Environmental damage, land restitution, and traditional livelihoods. In many rural areas in Colombia, dwellers demand the persistence of their traditional economic activities over industrial mining. 
-* Most of the environmental activists have claimed that environmental damages such as water pollution and soil degradation, are bringing not only negative consequences to biodiversity, but also social impacts. 
-* Just a couple of environmental conflicts relate to the unfulfillment of agreements between oil & gas industries and local communities in terms of environmental and social compensation. 
+
+- It can be observed that the mining industry is associated with 3 of the 5 types of environmental conflicts: Environmental damage, land restitution, and traditional livelihoods. In many rural areas in Colombia, dwellers demand the persistence of their traditional economic activities over industrial mining. 
+- Most of the environmental activists have claimed that environmental damages such as water pollution and soil degradation, are bringing not only negative consequences to biodiversity, but also social impacts. 
+- Just a couple of environmental conflicts relate to the unfulfillment of agreements between oil & gas industries and local communities in terms of environmental and social compensation. 
 
 
 ### What is the total number of threats and murders?
@@ -173,21 +174,21 @@ meanM <- mean(Dates$D1, na.rm = T) # 60 days
 meanAM <- mean(Dates$D2, na.rm = T) # 73 Days
 meanMov <- mean(Dates$D4, na.rm = T) # 7 years 
 
-events
+knitr::kable(events)
 ```
 
-* Of a total of 54 murdered activists, **only 9 received previous notification** by means of a threat
-* Only **1 leader** was murdered after being attacked 
+- Of a total of 54 murdered activists, **only 9 received previous notification** by means of a threat
+- Only **1 leader** was murdered after being attacked 
 
 ### How much time passes between a threat and an assassination? 
 
-* On average **60 days pass** before a threat turns into a fatality. However, assassinations can happen rapidly between the first 5 days after receiving a threat 
-* 73 days passed when a leader was murdered after being attacked 
+- On average **60 days pass** before a threat turns into a fatality. However, assassinations can happen rapidly between the first 5 days after receiving a threat 
+- 73 days passed when a leader was murdered after being attacked 
 
 ### What's the most violent industry? 
 
-* Most of the environmental crimes are committed by people in the mining sector (T&M)
-* It is Highly risky to fight for land rights and traditional livelihoods 
+- Most of the environmental crimes are committed by people in the mining sector (T&M)
+- It is Highly risky to fight for land rights and traditional livelihoods 
 
 ```{r}
 filter(violence, !is.na(Industry)) %>% 
@@ -208,13 +209,13 @@ filter(violence, !is.na(Industry)) %>%
 
 ### How long passes between the start date of a project and environmental movilizations?
 
-* On average 7 years. Max 14 years, Min 1 year (env damage & public consultation) 
+- On average 7 years. Max 14 years, Min 1 year (env damage & public consultation) 
 
 ### How long does it take to satisfy activists' demands?
 
-* Only 4 EJ cases out of 18 are considered a Success, 90% of them had to do land restitution conflicts
-* On average it took 6 years to satisfy activists' demands. Max 8
-* Some cases have remained unsolved for more than 30 years 
+- Only 4 EJ cases out of 18 are considered a Success, 90% of them had to do land restitution conflicts
+- On average it took 6 years to satisfy activists' demands. Max 8
+- Some cases have remained unsolved for more than 30 years 
 
 ```{r}
 status <- Dates %>% 
@@ -240,9 +241,9 @@ select(violence, Name, Perpetrator, Outcome, Driver, Industry, contains("Date"))
 
 ### What are the criminal entities accountable for the environmental crimes?
 
-* Paramilitaries and criminal bands
-* In 14 violent acts there was a clear association btw paramilitaries and companies
-* For only 14 cases of murder perpertrators have been identified
+- Paramilitaries and criminal bands
+- In 14 violent acts there was a clear association btw paramilitaries and companies
+- For only 14 cases of murder perpertrators have been identified
 
 ```{r}
 criminals <- violence %>% 
@@ -267,5 +268,6 @@ criminals2 <- violence %>%
 ```
 
 ### what's the rol of thw environmental agencies involved in these cases?
+
 ### How many cases involved a lawsuit?
 
