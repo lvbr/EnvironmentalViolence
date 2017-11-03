@@ -9,7 +9,7 @@ output:
     toc_float: yes
 ---
 
-*"Donde hay poca justicia es un peligro tener razón"* - Francisco de Quevedo
+*"Donde hay poca justicia es un peligro tener razon"* - Francisco de Quevedo
 
 ```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
